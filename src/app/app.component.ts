@@ -7,4 +7,6 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular-front-starter";
+  showCover: boolean = false;
+  showPlayer: boolean = false;
 }

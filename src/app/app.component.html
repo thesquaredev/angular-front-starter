@@ -1,6 +1,48 @@
-<div class="show-some-love">
-  <button mat-icon-button>
-    <mat-icon>star</mat-icon>
+<!--<div class="show-some-love">-->
+  <!--<button mat-icon-button>-->
+    <!--<mat-icon>star</mat-icon>-->
+  <!--</button>-->
+<!--</div>-->
+
+<section class="content d-flex justify-content-center align-items-center">
+  <button mat-icon-button class="nav-item" (click)="showCover=!showCover">
+    <i class="fa fa-play fa-2x"></i>
   </button>
-</div>
+</section>
+<section class="nav">
+  <div class="nav-items" [ngClass]="{'hidden': showCover}">
+    <button mat-icon-button class="nav-item">
+      <i class="fa fa-home fa-2x"></i>
+    </button>
+    <button mat-icon-button>
+      <i class="fa fa-bolt fa-2x"></i>
+    </button>
+    <button mat-icon-button>
+      <i class="fa fa-bell fa-2x"></i>
+    </button>
+    <button mat-icon-button>
+      <i class="fa fa-user fa-2x"></i>
+    </button>
+  </div>
+  <div class="player" [ngClass]="{'visible': showCover, 'over': showPlayer}">
+    <div class="cover" (click)="showPlayer=!showPlayer">
+      <img src="https://geo-static.traxsource.com/files/images/6e5bfdff2e89342ad0bc33748a031a07.jpg">
+    </div>
+    <div class="details">
+      <div class="title">Running Away</div>
+      <div class="artist">The Yellow Runners</div>
+    </div>
+    <div class="actions">
+      <button mat-icon-button>
+        <i class="fa fa-backward"></i>
+      </button>
+      <button mat-icon-button (click)="showPlayer=!showPlayer">
+        <i class="fa fa-pause"></i>
+      </button>
+      <button mat-icon-button>
+        <i class="fa fa-forward"></i>
+      </button>
+    </div>
+  </div>
+</section>
 

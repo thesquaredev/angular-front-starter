@@ -38,7 +38,7 @@ html {
 // No easy way to use custom font with Angular Material at the moment
 // See this: https://github.com/angular/material2/issues/724
 // Amd this: https://github.com/angular/material2/issues/205
-body *:not(mat-icon) {
+body *:not(mat-icon):not(i) {
   font-family: $primary-font !important;
   -webkit-font-smoothing: antialiased;
 }
